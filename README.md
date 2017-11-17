@@ -8,11 +8,9 @@ This program has functionality to create routing table by analyzing relationship
 
 # How to Run
 1. Open terminal in the folder containing the program
-2. Type make
-3. Input the number of nodes
-4. Input the relationships between nodes
-5. Input the number of scenarios
-6. Input the scenarios
+2. Type 'make'
+3. Type 'distancevector < tc.txt'
+4. You change the input in tc.txt
 
 # Analysis
 
