@@ -1,2 +1,2 @@
 all: 
-	g++ -o distancevector distancevector.cpp
+	g++ -o distancevector src/distancevector.cpp
