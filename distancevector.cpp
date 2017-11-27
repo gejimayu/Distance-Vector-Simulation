@@ -8,8 +8,8 @@ typedef struct {
 } table;
 
 int main() {
-	int N;
-	cin >> N;
+	int N, M;
+	cin >> N >> M;
 	
 	//initialize
 	bool connection[N+1][N+1];
@@ -18,23 +18,11 @@ int main() {
 			connection[i][j] = false;
 		
 	//set up connection between nodes	
-	for(int i = 1; i <= N; i++) {
-		string temp;
-		cin >> temp;
-		int k = 0;
-		while (k < temp.length()) {
-			int m = k;
-			int number = 0;
-			int multiplier = 1;
-			while(m < temp.length() && temp[m] != ',') {
-				int temp2 = temp[m] - '0';
-				number += multiplier * temp2;
-				multiplier *= 10;
-				m++; k++;
-			}
-			connection[i][number] = true;
-			k++;
-		}
+	int u, v;
+	for(int i = 1; i <= M; i++) {
+		cin >> u >> v;
+		connection[u][v] = true;
+		connection[v][u] = true;
  	}
 	
 	//create routing table
