@@ -9,7 +9,7 @@ This program has functionality to create routing table by analyzing relationship
 # How to Run
 1. Open terminal in the folder containing the program
 2. Type 'make'
-3. Type 'distancevector < tc.txt'
+3. Type 'distancevector < data/tc.txt'
 4. You change the input in tc.txt
 
 # Analysis
