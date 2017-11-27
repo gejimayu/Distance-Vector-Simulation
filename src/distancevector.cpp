@@ -26,7 +26,10 @@ int main() {
  	}
 	
 	//create routing table
-	table RT[N+1][N+1];
+	table** RT = new table* [N+1];
+	for (int i = 0; i <= N; i++)
+		RT[i] = new table [N+1];
+
 	for (int i = 1; i <= N; i++) {
 		for (int j = 1; j <= N; j++) {
 			if (i == j) {
@@ -58,6 +61,10 @@ int main() {
 						RT[to][i].distance = RT[from][i].distance + RT[to][from].distance;
 						RT[to][i].nextHop = from;
 					}
+					else
+					if ((RT[from][i].distance + RT[to][from].distance == RT[to][i].distance) && (from < RT[to][i].nextHop)) {
+						RT[to][i].nextHop = from;
+					}
 				}
 			}
 		}
@@ -69,5 +76,9 @@ int main() {
 			cout << RT[i][j].distance << " " << RT[i][j].nextHop << endl;
 		}
 	}
+
+	for (int i = 0; i <= N; i++)
+		delete [] RT[i];
+	delete [] RT;
 	
 }
