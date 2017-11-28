@@ -13,6 +13,16 @@ This program has functionality to create routing table by analyzing relationship
 4. You change the input in tc.txt
 
 # Analysis
+## How the Program Works
+1. Bagaimana mensimulasikan sebuah node
+2. Bagaimana proses pengiriman pesan antar node terjadi.
+`(Jelaskan dengan menggunakan nama fungsi dan/atau struktur data)`
+
+## Questions
+1. Apakah perbedaan dari routing protocol distance-vector dan link state? Manakah yang lebih baik untuk digunakan?
+-
+2. Pada implementasinya saat ini manakah yang lebih banyak digunakan, distance-vector atau  link state? Kenapa?
+- 
 
 # IF3130 Computer Networks
 Bandung Institute of Technology. 2017.
