@@ -13,13 +13,13 @@ int main() {
 	int N, M, i, j;
 	scanf("%d %d", &N, &M);
 	
-	//initialize
+	// initialize 
 	char connection[N+1][N+1];
 	for(i = 1; i <= N; i++)
 		for(j = 1; j <= N; j++)
 			connection[i][j] = false;
 		
-	//set up connection between nodes	
+	// set up connection between nodes	
 	int u, v;
 	for(i = 1; i <= M; i++) {
 		scanf("%d %d", &u, &v);
@@ -27,7 +27,7 @@ int main() {
 		connection[v][u] = true;
  	}
 	
-	//create routing table
+	// create routing table
 	table** RT = (table **)malloc((N+1) * sizeof(table *));
 	for (i = 0; i <= N; i++)
 		RT[i] = (table *)malloc((N+1) * sizeof(table));
@@ -55,24 +55,24 @@ int main() {
 	while(S--) {
 		int from, to;
 		scanf("%d %d", &from, &to);
-		if (connection[from][to]) {//changing information between nodes
-			//loop through source's connection
+		if (connection[from][to]) { // change information between nodes
+			// loop through source's connection
 			for (i = 1; i <= N; i++) {
-				if ((RT[from][i].distance > 0) && (i != to)) { //kalo node from,i punya koneksi, dan i bukan to
-					if ((RT[to][i].distance == -1) || (RT[from][i].distance + RT[to][from].distance < RT[to][i].distance)) {//kalo to,i belum ada koneksi secara langsung, atau distance dari from,i + to,from < to,i 
-						RT[to][i].distance = RT[from][i].distance + RT[to][from].distance;//maka di update to,i distancenya
-						RT[to][i].nextHop = from;//nextHopnya diisi from
+				if ((RT[from][i].distance > 0) && (i != to)) {
+					if ((RT[to][i].distance == -1) || (RT[from][i].distance + RT[to][from].distance < RT[to][i].distance)) { 
+						RT[to][i].distance = RT[from][i].distance + RT[to][from].distance;
+						RT[to][i].nextHop = from;
 					}
 					else 
-					if ((RT[from][i].distance + RT[to][from].distance == RT[to][i].distance) && (from < RT[to][i].nextHop)) {//jaraknya sama, tapi from < nextHop to,i
-						RT[to][i].nextHop = from; // update nilai nextHop
+					if ((RT[from][i].distance + RT[to][from].distance == RT[to][i].distance) && (from < RT[to][i].nextHop)) {
+						RT[to][i].nextHop = from;
 					}
 				}
 			}
 		}
 	}
 	
-	//output result
+	// output result
 	for (i = 1; i <= N; i++) {
 		for (j = 1; j <= N; j++) {
 			printf("%d %d\n", RT[i][j].distance, RT[i][j].nextHop);
