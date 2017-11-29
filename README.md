@@ -29,7 +29,7 @@ RT[i][j].nextHop berisi informasi mengenai node yang harus dilalui i untuk menca
 
 2. Bagaimana proses pengiriman pesan antar node terjadi.
 
-Lalu untuk setiap skenario, dibaca input node sumber(src) dan node tujuan(dest).
+Untuk setiap skenario, dibaca input node sumber(src) dan node tujuan(dest).
 
 	Jika src dan dest berhubungan langsung, maka proses lanjut, jika tidak maka skenario di-skip.
 
@@ -41,6 +41,13 @@ Lalu untuk setiap skenario, dibaca input node sumber(src) dan node tujuan(dest).
 		RT[dest][tmp].nextHop = src; //nexthop yang harus dilalui dest adalah src untuk mencapai tmp
 	Atau
 	Jika jaraknya sama, maka ambil nomor node yang lebih kecil.
+
+3. Pembagian tugas
+- inisialisasi - 13515082,13515118
+- algoritma - 13515082,13515118
+- penjelasan program - 13515043, 13515118
+- menjawab pertanyaan - 13515043, 13515082
+- debugging - 13515043, 13515082, 13515118
 
 ## Questions
 1. Apakah perbedaan dari routing protocol distance-vector dan link state? Manakah yang lebih baik untuk digunakan?
