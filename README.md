@@ -39,8 +39,8 @@ This program has functionality to create routing table by analyzing relationship
 	Jika jarak antar node dest ke tmp masih -1 (belum terdefinisi) atau <br>
 	jika jaraknya lebih kecil, yaitu node dest ke src + jarak node src ke tmp < jarak node dest ke tmp,<br>
 	maka isi routing table node dest terhadap node tmp dengan informasi yang baru.<br>
-	&nbsp;&nbsp;RT[dest][tmp].distance = RT[dest][src].distance + RT[src][tmp].distance; //jaraknya diupdate<br>
-	&nbsp;&nbsp;RT[dest][tmp].nextHop = src; //nexthop yang harus dilalui dest adalah src untuk mencapai tmp<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;RT[dest][tmp].distance = RT[dest][src].distance + RT[src][tmp].distance; //jaraknya diupdate<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;RT[dest][tmp].nextHop = src; //nexthop yang harus dilalui dest adalah src untuk mencapai tmp<br>
 	Atau<br>
 	Jika jaraknya sama, maka ambil nomor node yang lebih kecil.<br>
 
