@@ -27,6 +27,8 @@ Kami mensimulasikan sebuah node menjadi sebuah row/colomn pada sebuah array 2d (
 
 2. Bagaimana proses pengiriman pesan antar node terjadi.
 `(Jelaskan dengan menggunakan nama fungsi dan/atau struktur data)`
+setelah melakukan inisialisasi
+![Alt text](../inisialisasi.PNG?raw=true "Inisialisasi")
 
 ## Questions
 1. Apakah perbedaan dari routing protocol distance-vector dan link state? Manakah yang lebih baik untuk digunakan?
