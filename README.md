@@ -25,6 +25,7 @@ Kami mensimulasikan sebuah node menjadi sebuah row/colomn pada sebuah array 2d (
 - jika ada connection[row][column], maka menunjukkan row dan column merupakan node yang merupakan tetangga yang saling terhubung, distance diisi dengan 1 dan nextHop diisi dengan column
 - jika row <> column dan tidak ada connection[row][column], maka distance dan nextHop diisi -1
 
+
 2. Bagaimana proses pengiriman pesan antar node terjadi.
 `(Jelaskan dengan menggunakan nama fungsi dan/atau struktur data)`
 
