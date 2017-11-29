@@ -27,6 +27,9 @@ This program has functionality to create routing table by analyzing relationship
 - Link state jauh lebih kompleks dibanding distance vector yang cenderung simpel.
 - Link state membutuhkan spesifikasi hardware yang jauh lebih tinggi dibanding distance vector (Memory, peak CPU load)
 
+tiap protocols punya keunggulan untuk setiap konteks yang ditangani. contohnya distance vector protocols yang memang didesain untuk berjalan pada network yang relatif tidak terlalu besar (kurang dari 100 routers) karena protocol ini secara umum lebih mudah untuk dikonfigurasi dan membutuhkan lebih sedikit maintenance daripada link-state protocols. Tetapi kekurangannya adalah, distance vector tidak scalling dengan baik, karena dibutuhkann penggunaan CPU dan bandwidth yang lebih tinggi, dan juga membutuhkan waktu yang lama untuk konvergen. oleh karena itu, distance-vector protocol hanya cocok untuk network yang relatif kecil. 
+Sedangkan link state protocol memang didesain untuk beroperasi pada enterprise-level network   
+
 2. Pada implementasinya saat ini manakah yang lebih banyak digunakan, distance-vector atau  link state? Kenapa?
 
  
