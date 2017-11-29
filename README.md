@@ -16,19 +16,31 @@ This program has functionality to create routing table by analyzing relationship
 ## How the Program Works
 1. Bagaimana mensimulasikan sebuah node
 
-Kami mensimulasikan sebuah node menjadi sebuah row/colomn pada sebuah array 2d (matriks) dengan ukuran NxN
-- pada awalnya elemen-elemen pada matriks, yang adalah edge, diisi dengan nilai false yang menandakan bahwa belum ada koneksi secara langsung antara node-node tersebut
-- lalu dilakukan pengisian koneksi antar node berdasarkan inputan yang diberikan. 
-- lalu dilakukan pembuatan routing table untuk setiap node dengan membuat array 2d dari struktur data buatan yang berisi distance dan nextHop.
-- elemen-elemen tiap matriks menunjukkan info antara row (node yang menjadi fokus) dan column (tetangga), yakni ada distance dan hop. 
-- jika row = column yang berarti adalah node yang sama, maka distance disi 0 dan nextHop diisi dirinya row / column.
-- jika ada connection[row][column], maka menunjukkan row dan column merupakan node yang merupakan tetangga yang saling terhubung, distance diisi dengan 1 dan nextHop diisi dengan column
-- jika row <> column dan tidak ada connection[row][column], maka distance dan nextHop diisi -1
+Kami mensimulasikan sebuah node menjadi array 2 dimensi bertipe struktur data bentukan.
+
+Struktur data bentukan berisi :
+	- distance(int) yg menampung jarak.
+	- nextHop(int) yg menampung node berikutnya untuk mencapai tujuan.
+
+Struktur data tersebut mencirikan sebuah routing table yang sama juga berisi distance dan nexthop tiap node tetangganya.
+
+RT[i][j].distance berisi informasi mengenai jarak dari node i ke node j.
+RT[i][j].nextHop berisi informasi mengenai node yang harus dilalui i untuk mencapai j (inklusif).
 
 2. Bagaimana proses pengiriman pesan antar node terjadi.
-`(Jelaskan dengan menggunakan nama fungsi dan/atau struktur data)`
-setelah melakukan inisialisasi
-![Alt text](../inisialisasi.PNG?raw=true "Inisialisasi")
+
+Lalu untuk setiap skenario, dibaca input node sumber(src) dan node tujuan(dest).
+
+	Jika src dan dest berhubungan langsung, maka proses lanjut, jika tidak maka skenario di-skip.
+
+	Kemudian kita telusuri routing table node src (sebut node tmp) yang distance nya > 0 (terdefinisi / berhubungan)
+	Jika jarak antar node dest ke tmp masih -1 (belum terdefinisi) atau 
+	jika jaraknya lebih kecil, yaitu node dest ke src + jarak node src ke tmp < jarak node dest ke tmp,
+	maka isi routing table node dest terhadap node tmp dengan informasi yang baru.
+		RT[dest][tmp].distance = RT[dest][src].distance + RT[src][tmp].distance; //jaraknya diupdate
+		RT[dest][tmp].nextHop = src; //nexthop yang harus dilalui dest adalah src untuk mencapai tmp
+	Atau
+	Jika jaraknya sama, maka ambil nomor node yang lebih kecil.
 
 ## Questions
 1. Apakah perbedaan dari routing protocol distance-vector dan link state? Manakah yang lebih baik untuk digunakan?
