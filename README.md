@@ -15,6 +15,16 @@ This program has functionality to create routing table by analyzing relationship
 # Analysis
 ## How the Program Works
 1. Bagaimana mensimulasikan sebuah node
+
+Kami mensimulasikan sebuah node menjadi sebuah row/colomn pada sebuah array 2d (matriks) dengan ukuran NxN
+- pada awalnya elemen-elemen pada matriks, yang adalah edge, diisi dengan nilai false yang menandakan bahwa belum ada koneksi secara langsung antara node-node tersebut
+- lalu dilakukan pengisian koneksi antar node berdasarkan inputan yang diberikan. 
+- lalu dilakukan pembuatan routing table untuk setiap node dengan membuat array 2d dari struktur data buatan yang berisi distance dan nextHop.
+- elemen-elemen tiap matriks menunjukkan info antara row (node yang menjadi fokus) dan column (tetangga), yakni ada distance dan hop. 
+- jika row = column yang berarti adalah node yang sama, maka distance disi 0 dan nextHop diisi dirinya row / column.
+- jika ada connection[row][column], maka menunjukkan row dan column merupakan node yang merupakan tetangga yang saling terhubung, distance diisi dengan 1 dan nextHop diisi dengan column
+- jika row <> column dan tidak ada connection[row][column], maka distance dan nextHop diisi -1
+
 2. Bagaimana proses pengiriman pesan antar node terjadi.
 `(Jelaskan dengan menggunakan nama fungsi dan/atau struktur data)`
 
