@@ -38,6 +38,11 @@ lalu berikutnya adalah dilakukan pengecekan apakah node yang bertukar informasi 
 jika node tersebut (from) memiliki koneksi dengan node lain (i) selain node tujuan (to), maka akan dilakukan lagi pengecekan apakah node tujuan (to) belum mempunyai informasi tentang node lain (i) atau jarak dari node tersebut (From) ke node lain (i) ditambah jarak dari node tujuan (to) ke node tersebut (from) lebih besar dari jarak dari node tujuan (to) ke node lain(i), jika iya maka akan dilakukan update distance (to,i) menjadi jarak dari (from,i) ditambah jarak dari (to,from), dan nextHop (to,i) menjadi from. Jika node (to,i) sudah memiliki informasi jarak dan jarak dari node (from,i) + jarak dari node (to,from) >= maka akan dilakukan pengecekan apakah jarak dari node (from,i) + jarak dari node (to,from) = jarak dari node (to,i) dan apakah from < nextHop(to,i), jika iya maka akan dilakukan update pada nextHop(to,i) menjadi from. Jika tidak tidak dilakukan apa-apa
 
 3. Pembagian tugas
+inisialisasi - 13515082,13515118
+algoritma - 13515082,13515118
+penjelasan program - 13515043
+menjawab pertanyaan - 13515043, 13515082
+debugging - 13515043, 13515082, 13515118
 
 ## Questions
 1. Apakah perbedaan dari routing protocol distance-vector dan link state? Manakah yang lebih baik untuk digunakan?
