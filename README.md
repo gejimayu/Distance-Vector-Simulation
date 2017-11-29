@@ -20,9 +20,16 @@ This program has functionality to create routing table by analyzing relationship
 
 ## Questions
 1. Apakah perbedaan dari routing protocol distance-vector dan link state? Manakah yang lebih baik untuk digunakan?
--
+
+-Link-state routing protocols tahu keseluruhan network dan semua routers punya view yang sama terhadap sebuah network. Sedangkan Distance-vector hanya tahu tentang tetangga yang terhubung langsung dan info tentang cost yang dimiliki oleh tetangga tersebut.
+- Link state cepat menuju konvergen, sedangkan distance-vector membutuhkan waktu yang lama untuk mencapai konvergen.
+- Link state membutuhkan setiap node untuk sangat bekerjasama, biasanya dibawahi oleh manajemen yang sama, sedangkan distance vector biasanya lebih kuat (tapi tetap rentan terhadap bad information), dan membuat pengguna lebih kreatif, seperti melakukan route filtering.
+- Link state jauh lebih kompleks dibanding distance vector yang cenderung simpel.
+- Link state membutuhkan spesifikasi hardware yang jauh lebih tinggi dibanding distance vector (Memory, peak CPU load)
+
 2. Pada implementasinya saat ini manakah yang lebih banyak digunakan, distance-vector atau  link state? Kenapa?
-- 
+
+ 
 
 # IF3130 Computer Networks
 Bandung Institute of Technology. 2017.
