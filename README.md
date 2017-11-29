@@ -43,15 +43,6 @@ This program has functionality to create routing table by analyzing relationship
 
 	Atau jika jaraknya sama, maka ambil nomor node yang lebih kecil.
 
-3. Pembagian tugas
-	- Fungsionalitas inisialisasi program - 13515082
-	- Fungsionalitas membuat routing table - 13515082, 13515118
-	- Fungsionalitas update routing table - 13515118
-	- Fungsionalitas input/output routing table - 13515043
-	- Penjelasan program - 13515043, 13515118
-	- Menjawab pertanyaan - 13515043, 13515082
-	- Debugging - 13515043, 13515082, 13515118
-
 ## Questions
 1. Apakah perbedaan dari routing protocol distance-vector dan link state? Manakah yang lebih baik untuk digunakan?
 
@@ -71,6 +62,14 @@ This program has functionality to create routing table by analyzing relationship
 	Sedangkan distance vector lebih diaplikasikan pada network yang link speed nya berbeda-beda.
 	Contoh, jika pengguna menggunakan Cisco Network, distance vector lebih baik digunakan seperti pada protokol seperti EIGRP.
 
+# Pembagian tugas
+- Fungsionalitas inisialisasi program - 13515082
+- Fungsionalitas membuat routing table - 13515082, 13515118
+- Fungsionalitas update routing table - 13515118
+- Fungsionalitas input/output routing table - 13515043
+- Penjelasan program - 13515043, 13515118
+- Menjawab pertanyaan - 13515043, 13515082
+- Debugging - 13515043, 13515082, 13515118
 
 # IF3130 Computer Networks
 Bandung Institute of Technology. 2017.
