@@ -26,6 +26,9 @@ Kami mensimulasikan sebuah node menjadi sebuah row/colomn pada sebuah array 2d (
 - jika row <> column dan tidak ada connection[row][column], maka distance dan nextHop diisi -1
 
 
+
+
+
 2. Bagaimana proses pengiriman pesan antar node terjadi.
 `(Jelaskan dengan menggunakan nama fungsi dan/atau struktur data)`
 
