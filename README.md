@@ -25,6 +25,7 @@ This program has functionality to create routing table by analyzing relationship
 	Struktur data tersebut mencirikan sebuah routing table yang sama juga berisi distance dan nexthop tiap node tetangganya.
 
 	`RT[i][j].distance berisi informasi mengenai jarak dari node i ke node j.`
+	
 	`RT[i][j].nextHop berisi informasi mengenai node yang harus dilalui i untuk mencapai j (inklusif).`
 
 2. Bagaimana proses pengiriman pesan antar node terjadi.
@@ -39,6 +40,7 @@ This program has functionality to create routing table by analyzing relationship
 	maka isi routing table node dest terhadap node tmp dengan informasi yang baru.
 	
 	`RT[dest][tmp].distance = RT[dest][src].distance + RT[src][tmp].distance;`
+	
 	`RT[dest][tmp].nextHop = src;`
 
 	Atau jika jaraknya sama, maka ambil nomor node yang lebih kecil.
